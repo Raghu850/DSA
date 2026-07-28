@@ -2,8 +2,5 @@
 a=int(input())
 for i in range(a):
     b=int(input())
-    if b<5:
-        print(b)
-    else:
-        b//=5
-        print(b*4)
+    coins=(b//5)*4+(b%5)
+    print(coins)
