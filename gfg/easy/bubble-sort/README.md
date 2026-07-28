@@ -36,7 +36,7 @@ Explanation: An array that is already sorted should remain unchanged after apply
 **Language:** Python  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-07-28T07:31:29.707Z  
+**Submitted:** 2026-07-28T07:57:23.026Z  
 
 ```py
 class Solution:
