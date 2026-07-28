@@ -49,18 +49,15 @@ Output
 **Language:** Python  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-07-28T09:33:39.814Z  
+**Submitted:** 2026-07-28T09:34:56.093Z  
 
 ```py
 # cook your dish here
 a=int(input())
 for i in range(a):
     b=int(input())
-    if b<5:
-        print(b)
-    else:
-        b//=5
-        print(b*4)
+    coins=(b//5)*4+(b%5)
+    print(coins)
 ```
 
 ---
