@@ -1,4 +1,4 @@
-# 2D Array - DS
+# Dynamic Array
 
 ![Difficulty](https://img.shields.io/badge/Difficulty-Easy-green)
 
@@ -51,7 +51,7 @@ Each of the $q$ subsequent lines contains a query string, $queries[i]$.
 **Language:** Python  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-07-28T08:53:22.835Z  
+**Submitted:** 2026-07-28T09:01:16.889Z  
 
 ```py
 #!/bin/python3
@@ -63,36 +63,49 @@ import re
 import sys
 
 #
-# Complete the 'hourglassSum' function below.
+# Complete the 'dynamicArray' function below.
 #
-# The function is expected to return an INTEGER.
-# The function accepts 2D_INTEGER_ARRAY arr as parameter.
+# The function is expected to return an INTEGER_ARRAY.
+# The function accepts following parameters:
+#  1. INTEGER n
+#  2. 2D_INTEGER_ARRAY queries
 #
 
-def hourglassSum(arr):
+def dynamicArray(n, queries):
     # Write your code here
-    n = len(arr)
-    m = len(arr[0])
-    ans = float('-inf')
-    dir = [[-1,-1], [-1,0], [-1,1], [0, 0], [1, -1], [1,0], [1, 1]]
-    for i in range(1, n-1):
-        for j in range(1, m-1):
-            sm = 0
-            for k in dir:
-                sm += arr[i + k[0]][j+k[1]]
-            ans = max(ans, sm)
+    arr=[]
+    for x in range(n):
+        arr.append([])
+    last=0
+    Idx=0
+    ans=[]
+    for r in queries:
+        if r[0]==1:
+            Idx=(r[1]^last)%n
+            arr[Idx].append(r[2])
+        elif r[0]==2:
+            Idx=(r[1]^last)%n
+            last=arr[Idx][r[2]%len(arr[Idx])]
+            ans.append(last)
     return ans
 if __name__ == '__main__':
     fptr = open(os.environ['OUTPUT_PATH'], 'w')
 
-    arr = []
+    first_multiple_input = input().rstrip().split()
 
-    for _ in range(6):
-        arr.append(list(map(int, input().rstrip().split())))
+    n = int(first_multiple_input[0])
 
-    result = hourglassSum(arr)
+    q = int(first_multiple_input[1])
 
-    fptr.write(str(result) + '\n')
+    queries = []
+
+    for _ in range(q):
+        queries.append(list(map(int, input().rstrip().split())))
+
+    result = dynamicArray(n, queries)
+
+    fptr.write('\n'.join(map(str, result)))
+    fptr.write('\n')
 
     fptr.close()
 
