@@ -6,14 +6,14 @@
 
 | Total Problems | Topics |
 |---|---|
-| 1 | 2 |
+| 2 | 2 |
 
 ---
 
 ## 📂 Topic-Wise Problems
 
 - [greedy](#greedy) (1)
-- [implementation](#implementation) (1)
+- [implementation](#implementation) (2)
 
 ---
 
@@ -27,6 +27,7 @@
 
 | # | Problem | Difficulty | Solution |
 |---|---------|------------|----------|
+| 282A | [Bit++](https://codeforces.com/contest/282/problem/A) | 800 | [Python 3](https://github.com/Raghu850/DSA/blob/HEAD/282/A%20-%20Bit%2B%2B/solution.py) |
 | 514A | [Chewbaсca and Number](https://codeforces.com/contest/514/problem/A) | 1200 | [Python 3](https://github.com/Raghu850/DSA/blob/HEAD/514/A%20-%20Chewba%D1%81ca%20and%20Number/solution.py) |
 
 ---
