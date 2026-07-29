@@ -50,8 +50,8 @@ rotate 2 steps to the right: [3,99,-1,-100]
 
 **Language:** Python  
 **Runtime:** 0 ms  
-**Memory:** 19.3 MB  
-**Submitted:** 2026-07-29T09:34:10.646Z  
+**Memory:** 19.4 MB  
+**Submitted:** 2026-07-29T09:33:43.599Z  
 
 ```py
 class Solution:
