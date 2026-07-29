@@ -49,9 +49,9 @@ rotate 2 steps to the right: [3,99,-1,-100]
 ## Solution
 
 **Language:** Python  
-**Runtime:** 0 ms  
-**Memory:** 19.3 MB  
-**Submitted:** 2026-07-29T09:33:37.715Z  
+**Runtime:** 11 ms (beats 19.57%)  
+**Memory:** 27.1 MB (beats 7.67%)  
+**Submitted:** 2026-07-29T09:33:50.327Z  
 
 ```py
 class Solution:
@@ -61,8 +61,6 @@ class Solution:
         """
         n=len(nums)
         k%=n
-        if k == 0:
-            return
         def rev(l,r):
             while l<r:
                 nums[l],nums[r]=nums[r],nums[l]
