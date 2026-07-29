@@ -54,19 +54,20 @@ After transmogrification, the characteristic values become {12,14,11,45,11}, out
 **Language:** Python  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-07-29T03:55:08.583Z  
+**Submitted:** 2026-07-29T20:59:06.449Z  
 
 ```py
 # cook your dish here
-n=int(input())
-for i in range(n):
-    a,b=map(int,input().split())
-    if a<b:
-        print("<")
-    elif a>b:
-        print(">")
-    else:
-        print("=")
+t=int(input())
+for _ in range(t):
+    n,k=map(int,input().split())
+    arr=list(map(int,input().split()))
+    ans=0
+    for i in arr:
+        i+=k
+        if i%7==0:
+            ans+=1
+    print(ans)
 ```
 
 ---
