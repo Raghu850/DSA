@@ -49,9 +49,9 @@ rotate 2 steps to the right: [3,99,-1,-100]
 ## Solution
 
 **Language:** Python  
-**Runtime:** 12 ms (beats 14.09%)  
-**Memory:** 27 MB (beats 7.67%)  
-**Submitted:** 2026-07-29T09:33:25.553Z  
+**Runtime:** 0 ms  
+**Memory:** 19.3 MB  
+**Submitted:** 2026-07-29T09:33:37.715Z  
 
 ```py
 class Solution:
