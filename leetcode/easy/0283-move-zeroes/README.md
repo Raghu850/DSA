@@ -40,9 +40,9 @@ Output: [0]
 ## Solution
 
 **Language:** Python  
-**Runtime:** 0 ms  
-**Memory:** 19.3 MB  
-**Submitted:** 2026-07-30T04:01:44.875Z  
+**Runtime:** 3 ms (beats 81.72%)  
+**Memory:** 20.5 MB (beats 23.54%)  
+**Submitted:** 2026-07-30T04:01:51.248Z  
 
 ```py
 class Solution:
