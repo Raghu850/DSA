@@ -43,8 +43,8 @@ Output: 2
 
 **Language:** Python  
 **Runtime:** 0 ms  
-**Memory:** 19.4 MB  
-**Submitted:** 2026-08-01T05:12:59.813Z  
+**Memory:** 19.1 MB  
+**Submitted:** 2026-08-01T05:14:04.342Z  
 
 ```py
 class Solution:
