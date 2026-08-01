@@ -46,9 +46,9 @@ Output: [[0,0,0,0],[0,4,5,0],[0,3,1,0]]
 ## Solution
 
 **Language:** Python  
-**Runtime:** 2 ms (beats 93.12%)  
-**Memory:** 20.7 MB (beats 29.55%)  
-**Submitted:** 2026-08-01T09:03:49.419Z  
+**Runtime:** 5 ms (beats 69.14%)  
+**Memory:** 20.6 MB (beats 29.55%)  
+**Submitted:** 2026-08-01T09:04:21.571Z  
 
 ```py
 class Solution:
