@@ -42,9 +42,9 @@ Output: 2
 ## Solution
 
 **Language:** Python  
-**Runtime:** 5 ms (beats 65.13%)  
-**Memory:** 21.1 MB (beats 84.71%)  
-**Submitted:** 2026-08-01T05:14:10.208Z  
+**Runtime:** 0 ms  
+**Memory:** 19.4 MB  
+**Submitted:** 2026-08-01T05:12:03.712Z  
 
 ```py
 class Solution:
@@ -58,7 +58,13 @@ class Solution:
                 cnt+=1
             else:
                 cnt-=1
-        return ele
+        cnt1=0
+        for i in range(len(nums)):
+            if nums[i]==ele:
+                cnt1+=1
+        if cnt1>len(nums)//2:
+            return ele
+        return -1
 ```
 
 ---
