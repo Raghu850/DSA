@@ -41,48 +41,34 @@ Output: [[2,2,2,2]]
 ## Solution
 
 **Language:** Python  
-**Runtime:** 19 ms (beats 96.78%)  
-**Memory:** 19.6 MB (beats 6.24%)  
-**Submitted:** 2026-08-03T18:26:59.000Z  
+**Runtime:** 399 ms (beats 54.85%)  
+**Memory:** 19.3 MB (beats 53.09%)  
+**Submitted:** 2026-08-03T19:38:19.945Z  
 
 ```py
 class Solution:
     def fourSum(self, nums: List[int], target: int) -> List[List[int]]:
-        nums = sorted(nums)
-
-        def two_sum(nums, target):
-            seen = set()
-            res = set()
-            for num in nums:
-                if target - num in seen:
-                    res.add((target - num, num))
-                seen.add(num)
-            
-            return res
-
-        def k_sum(nums, target, k):
-
-            res = []
-
-            average = target // k
-
-            if nums[0] > average or nums[-1] < average:
-                return res
-
-            if k == 2:
-                return two_sum(nums, target)
-            else:
-                for idx in range(len(nums) - k + 1):
-                    if idx > 0 and nums[idx - 1] == nums[idx]:
-                        continue 
-                    results = k_sum(nums[idx + 1:], target - nums[idx], k - 1)
-                    for result in results:
-                        result = list(result)
-                        result.append(nums[idx])
-                        res.append(result)
-            return res
-
-        return k_sum(nums, target, 4)
+        n=len(nums)
+        ans=[]
+        nums.sort()
+        for i in range(n):
+            if i>0 and nums[i]==nums[i-1]:continue
+            for j in range(i+1,n):
+                if j!=(i+1) and nums[j]==nums[j-1]:continue
+                k=j+1
+                l=n-1
+                while k<l:
+                    sum=nums[i]+nums[j]+nums[k]+nums[l]
+                    if sum==target:
+                        temp=[nums[i],nums[j],nums[k],nums[l]]
+                        ans.append(temp)
+                        k+=1
+                        l-=1
+                        while k<l and nums[k]==nums[k-1]: k+=1
+                        while k<l and nums[l]==nums[l+1]:l-=1
+                    elif sum<target :k+=1
+                    else: l-=1
+        return ans
 ```
 
 ---
