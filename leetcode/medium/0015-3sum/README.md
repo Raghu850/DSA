@@ -52,9 +52,9 @@ Explanation: The only possible triplet sums up to 0.
 ## Solution
 
 **Language:** Python  
-**Runtime:** 0 ms  
-**Memory:** 19.3 MB  
-**Submitted:** 2026-08-03T18:23:28.863Z  
+**Runtime:** 631 ms (beats 60.45%)  
+**Memory:** 22.3 MB (beats 31.49%)  
+**Submitted:** 2026-08-03T18:23:52.046Z  
 
 ```py
 class Solution:
@@ -79,7 +79,7 @@ class Solution:
                     k-=1
                     while j<k and nums[j]==nums[j-1]:j+=1
                     while j<k and nums[k]==nums[k+1]:k-=1
-            return ans
+        return ans
 ```
 
 ---
