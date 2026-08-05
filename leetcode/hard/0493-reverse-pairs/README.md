@@ -46,9 +46,9 @@ Explanation: The reverse pairs are:
 ## Solution
 
 **Language:** Python  
-**Runtime:** 0 ms  
-**Memory:** 19.3 MB  
-**Submitted:** 2026-08-05T15:18:15.198Z  
+**Runtime:** 885 ms (beats 56.91%)  
+**Memory:** 34.4 MB (beats 27.61%)  
+**Submitted:** 2026-08-05T15:18:20.722Z  
 
 ```py
 class Solution:
