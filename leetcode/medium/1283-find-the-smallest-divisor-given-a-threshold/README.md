@@ -41,14 +41,15 @@ Output: 44
 ## Solution
 
 **Language:** Python  
-**Runtime:** 135 ms (beats 44.05%)  
-**Memory:** 24.4 MB (beats 76.59%)  
-**Submitted:** 2026-08-07T21:21:20.705Z  
+**Runtime:** 131 ms (beats 57.47%)  
+**Memory:** 24.6 MB (beats 14.33%)  
+**Submitted:** 2026-08-07T21:23:40.533Z  
 
 ```py
 class Solution:
     def smallestDivisor(self, nums: List[int], threshold: int) -> int:
         n=len(nums)
+        if n>threshold: return -1
         l,h=1,max(nums)
         ans=-1
         def sumofd(d):
