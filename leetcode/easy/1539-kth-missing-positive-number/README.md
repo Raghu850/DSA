@@ -46,9 +46,9 @@ Could you solve this problem in less than O(n) complexity?
 ## Solution
 
 **Language:** Python  
-**Runtime:** 3 ms (beats 26.44%)  
-**Memory:** 19 MB (beats 99.87%)  
-**Submitted:** 2026-08-07T21:58:25.618Z  
+**Runtime:** 0 ms  
+**Memory:** 19.3 MB  
+**Submitted:** 2026-08-07T21:58:45.244Z  
 
 ```py
 class Solution:
