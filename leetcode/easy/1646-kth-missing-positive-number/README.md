@@ -47,8 +47,8 @@ Could you solve this problem in less than O(n) complexity?
 
 **Language:** Python  
 **Runtime:** 0 ms (beats 100.00%)  
-**Memory:** 19.1 MB (beats 95.09%)  
-**Submitted:** 2026-08-07T22:02:52.140Z  
+**Memory:** 19.3 MB (beats 34.19%)  
+**Submitted:** 2026-08-07T22:01:16.027Z  
 
 ```py
 class Solution:
