@@ -44,8 +44,8 @@ The best way is to split it into [1,2,3] and [4,5], where the largest sum among 
 
 **Language:** Python  
 **Runtime:** 3 ms (beats 71.12%)  
-**Memory:** 19.3 MB (beats 46.77%)  
-**Submitted:** 2026-08-09T17:06:51.692Z  
+**Memory:** 19.2 MB (beats 82.44%)  
+**Submitted:** 2026-08-11T20:10:25.983Z  
 
 ```py
 class Solution:
