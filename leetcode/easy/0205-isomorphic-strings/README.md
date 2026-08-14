@@ -52,9 +52,9 @@ The strings `s` and `t` can not be made identical as `'1'` needs to be mapped to
 ## Solution
 
 **Language:** Python  
-**Runtime:** 0 ms  
-**Memory:** 19.2 MB  
-**Submitted:** 2026-08-14T15:45:22.411Z  
+**Runtime:** 7 ms (beats 37.08%)  
+**Memory:** 19.4 MB (beats 21.95%)  
+**Submitted:** 2026-08-14T15:45:27.929Z  
 
 ```py
 class Solution:
