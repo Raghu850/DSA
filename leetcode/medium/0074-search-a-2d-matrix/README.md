@@ -44,8 +44,8 @@ Output: false
 
 **Language:** Python  
 **Runtime:** 0 ms (beats 100.00%)  
-**Memory:** 19.4 MB (beats 78.00%)  
-**Submitted:** 2026-08-10T17:47:56.389Z  
+**Memory:** 19.6 MB (beats 12.89%)  
+**Submitted:** 2026-08-14T21:24:18.180Z  
 
 ```py
 class Solution:
