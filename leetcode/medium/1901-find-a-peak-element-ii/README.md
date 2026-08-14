@@ -45,23 +45,44 @@ Explanation: Both 30 and 32 are peak elements so [1,1] and [2,2] are both accep
 ## Solution
 
 **Language:** Python  
-**Runtime:** 19 ms (beats 11.54%)  
-**Memory:** 46 MB (beats 92.64%)  
-**Submitted:** 2026-08-14T22:02:56.570Z  
+**Runtime:** 0 ms (beats 100.00%)  
+**Memory:** 46.3 MB (beats 37.62%)  
+**Submitted:** 2026-08-14T22:04:15.560Z  
 
 ```py
 class Solution:
+    def findMaxIndex(self, mat, col):
+        row = 0
+
+        for i in range(1, len(mat)):
+            if mat[i][col] > mat[row][col]:
+                row = i
+
+        return row
+
     def findPeakGrid(self, mat):
-        ans = [0, 0]
-        max_val = float('-inf')
+        n = len(mat)
+        m = len(mat[0])
 
-        for i in range(len(mat)):
-            for j in range(len(mat[0])):
-                if mat[i][j] > max_val:
-                    max_val = mat[i][j]
-                    ans = [i, j]
+        low, high = 0, m - 1
 
-        return ans
+        while low <= high:
+            mid = low + (high - low) // 2
+
+            max_row = self.findMaxIndex(mat, mid)
+
+            left = mat[max_row][mid - 1] if mid > 0 else -1
+            right = mat[max_row][mid + 1] if mid < m - 1 else -1
+
+            if mat[max_row][mid] > left and mat[max_row][mid] > right:
+                return [max_row, mid]
+
+            if mat[max_row][mid] < left:
+                high = mid - 1
+            else:
+                low = mid + 1
+
+        return [-1, -1]
 ```
 
 ---
