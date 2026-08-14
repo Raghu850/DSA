@@ -45,9 +45,9 @@ Explanation: Both 30 and 32 are peak elements so [1,1] and [2,2] are both accep
 ## Solution
 
 **Language:** Python  
-**Runtime:** 18 ms (beats 11.33%)  
-**Memory:** 46.3 MB (beats 15.36%)  
-**Submitted:** 2026-08-13T16:07:36.333Z  
+**Runtime:** 19 ms (beats 11.54%)  
+**Memory:** 46 MB (beats 92.64%)  
+**Submitted:** 2026-08-14T22:02:56.570Z  
 
 ```py
 class Solution:
