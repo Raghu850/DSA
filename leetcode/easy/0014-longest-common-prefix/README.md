@@ -39,21 +39,23 @@ Explanation: There is no common prefix among the input strings.
 
 **Language:** Python  
 **Runtime:** 0 ms (beats 100.00%)  
-**Memory:** 19.2 MB (beats 72.95%)  
-**Submitted:** 2026-08-14T15:44:40.265Z  
+**Memory:** 19.2 MB (beats 73.08%)  
+**Submitted:** 2026-08-15T20:54:04.120Z  
 
 ```py
 class Solution:
     def longestCommonPrefix(self, strs: List[str]) -> str:
         if not strs:
             return ""
-        prefix = strs[0]
-        for s in strs[1:]:
-            while not s.startswith(prefix):
-                prefix = prefix[:-1]
-                if prefix == "":
-                    return ""
-        return prefix
+
+        for i in range(len(strs[0])):
+            ch = strs[0][i]
+
+            for s in strs[1:]:
+                if i >= len(s) or s[i] != ch:
+                    return strs[0][:i]
+
+        return strs[0]
 ```
 
 ---
