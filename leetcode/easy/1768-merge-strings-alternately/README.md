@@ -56,9 +56,9 @@ merged: a p b q c   d
 ## Solution
 
 **Language:** Python  
-**Runtime:** 51 ms (beats 19.23%)  
-**Memory:** 19.3 MB (beats 17.88%)  
-**Submitted:** 2026-08-17T17:46:37.395Z  
+**Runtime:** 49 ms (beats 29.43%)  
+**Memory:** 19.2 MB (beats 56.87%)  
+**Submitted:** 2026-08-17T17:46:49.596Z  
 
 ```py
 class Solution:
