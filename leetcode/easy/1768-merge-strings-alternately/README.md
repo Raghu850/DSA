@@ -56,29 +56,25 @@ merged: a p b q c   d
 ## Solution
 
 **Language:** Python  
-**Runtime:** 49 ms (beats 29.43%)  
+**Runtime:** 43 ms (beats 71.47%)  
 **Memory:** 19.2 MB (beats 56.87%)  
-**Submitted:** 2026-08-17T17:46:49.596Z  
+**Submitted:** 2026-08-17T17:47:44.121Z  
 
 ```py
 class Solution:
     def mergeAlternately(self, word1: str, word2: str) -> str:
-        c=''
-        n,m=len(word1),len(word2)
-        i,j=0,0
-        while i<n and j<m:
-            c+=word1[i]
-            c+=word2[j]
-            i+=1
-            j+=1
-        while i<n:
-            c+=word1[i]
-            i+=1
-        while j<m:
-            c+=word2[j]
-            j+=1
-        return c
+        result = []
+        i = 0
 
+        while i < len(word1) and i < len(word2):
+            result.append(word1[i])
+            result.append(word2[i])
+            i += 1
+
+        result.append(word1[i:])
+        result.append(word2[i:])
+
+        return ''.join(result)
 ```
 
 ---
