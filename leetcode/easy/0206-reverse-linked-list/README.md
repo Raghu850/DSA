@@ -47,8 +47,8 @@ Output: []
 
 **Language:** Python  
 **Runtime:** 0 ms (beats 100.00%)  
-**Memory:** 20.4 MB (beats 91.98%)  
-**Submitted:** 2026-08-17T18:05:54.686Z  
+**Memory:** 20.5 MB (beats 65.70%)  
+**Submitted:** 2026-08-17T18:04:42.307Z  
 
 ```py
 # Definition for singly-linked list.
