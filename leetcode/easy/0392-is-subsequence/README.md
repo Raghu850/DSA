@@ -42,22 +42,19 @@ Output: false
 
 **Language:** Python  
 **Runtime:** 0 ms (beats 100.00%)  
-**Memory:** 19.3 MB (beats 25.96%)  
-**Submitted:** 2026-08-18T09:06:42.794Z  
+**Memory:** 19.4 MB (beats 25.96%)  
+**Submitted:** 2026-08-18T09:08:57.486Z  
 
 ```py
 class Solution:
     def isSubsequence(self, s: str, t: str) -> bool:
-        j=0
-        for i in range(len(s)):
-            while j<len(t):
-                if s[i]==t[j]:
-                    j+=1
-                    break
-                j+=1
-            else:
-                return False
-        return True
+        j = 0
+
+        for ch in t:
+            if j < len(s) and s[j] == ch:
+                j += 1
+
+        return j == len(s)
 ```
 
 ---
