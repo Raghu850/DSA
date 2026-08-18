@@ -55,9 +55,9 @@ Explanation: You need to reduce multiple spaces between two words to a single sp
 ## Solution
 
 **Language:** Python  
-**Runtime:** 1 ms (beats 37.54%)  
-**Memory:** 19.3 MB (beats 40.04%)  
-**Submitted:** 2026-08-18T05:26:22.586Z  
+**Runtime:** 0 ms  
+**Memory:** 19.3 MB  
+**Submitted:** 2026-08-18T05:26:36.394Z  
 
 ```py
 class Solution:
