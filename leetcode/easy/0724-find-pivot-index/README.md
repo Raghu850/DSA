@@ -61,9 +61,9 @@ Right sum = nums[1] + nums[2] = 1 + -1 = 0
 ## Solution
 
 **Language:** Python  
-**Runtime:** 12 ms (beats 24.35%)  
-**Memory:** 20.4 MB (beats 46.07%)  
-**Submitted:** 2026-08-20T07:37:39.216Z  
+**Runtime:** 4 ms (beats 72.07%)  
+**Memory:** 20.3 MB (beats 46.07%)  
+**Submitted:** 2026-08-20T07:37:47.239Z  
 
 ```py
 class Solution:
