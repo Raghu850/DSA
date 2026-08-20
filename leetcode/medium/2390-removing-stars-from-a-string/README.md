@@ -52,20 +52,22 @@ Explanation: The entire string is removed, so we return an empty string.
 ## Solution
 
 **Language:** Python  
-**Runtime:** 92 ms (beats 51.96%)  
-**Memory:** 20.5 MB (beats 40.68%)  
-**Submitted:** 2026-08-20T09:23:17.696Z  
+**Runtime:** 78 ms (beats 97.70%)  
+**Memory:** 20.5 MB (beats 75.27%)  
+**Submitted:** 2026-08-20T09:23:38.818Z  
 
 ```py
 class Solution:
     def removeStars(self, s: str) -> str:
-        st=[]
-        for i in s:
-            if i=='*':
-                st.pop()
+        stack = []
+
+        for ch in s:
+            if ch == "*":
+                stack.pop()
             else:
-                st.append(i)
-        return "".join(st)
+                stack.append(ch)
+
+        return "".join(stack)
 ```
 
 ---
