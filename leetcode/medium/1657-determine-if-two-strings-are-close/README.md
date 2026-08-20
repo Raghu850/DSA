@@ -57,9 +57,9 @@ Apply Operation 2: "baaccc" -> "abbccc"
 ## Solution
 
 **Language:** Python  
-**Runtime:** 163 ms (beats 29.25%)  
-**Memory:** 20.4 MB (beats 52.75%)  
-**Submitted:** 2026-08-20T08:58:53.240Z  
+**Runtime:** 0 ms  
+**Memory:** 19.5 MB  
+**Submitted:** 2026-08-20T08:59:46.523Z  
 
 ```py
 class Solution:
@@ -72,7 +72,7 @@ class Solution:
             freq1[i]=freq1.get(i,0)+1
         for i in word2:
             freq2[i]=freq2.get(i,0)+1
-        if set(freq1.keys()) != set(freq2.keys()):
+        if sorted(freq1.keys()) != sorted(freq2.keys()):
             return False
         for i,j in zip(sorted(freq1.values()),sorted(freq2.values())):
             if i!=j:
