@@ -55,29 +55,32 @@ And in round 2, the third senator can just announce the victory since he is the 
 ## Solution
 
 **Language:** Python  
-**Runtime:** 12 ms (beats 46.26%)  
-**Memory:** 19.7 MB (beats 14.26%)  
-**Submitted:** 2026-08-20T10:07:05.973Z  
+**Runtime:** 11 ms (beats 79.33%)  
+**Memory:** 19.5 MB (beats 78.84%)  
+**Submitted:** 2026-08-20T10:10:08.462Z  
 
 ```py
+from collections import deque
 class Solution:
     def predictPartyVictory(self, senate: str) -> str:
-        rad=deque()
-        dire=deque()
-        n=len(senate)
-        for i,ch in enumerate(senate):
-            if ch=='R':
-                rad.append(i)
+        radiant = deque()
+        dire = deque()
+        n = len(senate)
+        for i in range(n):
+            if senate[i] == 'R':
+                radiant.append(i)
             else:
                 dire.append(i)
-        while rad and dire:
-            r=rad.popleft()
-            d=dire.popleft()
-            if r<d:
-                rad.append(r+n)
+        while radiant and dire:
+            r = radiant.popleft()
+            d = dire.popleft()
+            if r < d:
+                radiant.append(r + n)
             else:
-                dire.append(d+n)
-        return "Radiant" if rad else "Dire"    
+                dire.append(d + n)
+        if radiant:
+            return "Radiant"
+        return "Dire"
 ```
 
 ---
