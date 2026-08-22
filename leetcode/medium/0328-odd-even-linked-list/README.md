@@ -41,8 +41,8 @@ Output: [2,3,6,7,1,5,4]
 
 **Language:** Python  
 **Runtime:** 0 ms (beats 100.00%)  
-**Memory:** 21.2 MB (beats 10.04%)  
-**Submitted:** 2026-08-19T14:48:25.488Z  
+**Memory:** 21.1 MB (beats 76.26%)  
+**Submitted:** 2026-08-22T16:13:25.621Z  
 
 ```py
 # Definition for singly-linked list.
