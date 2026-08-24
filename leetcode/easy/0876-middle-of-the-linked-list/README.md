@@ -38,9 +38,9 @@ Explanation: Since the list has two middle nodes with values 3 and 4, we return 
 ## Solution
 
 **Language:** Python  
-**Runtime:** 0 ms (beats 100.00%)  
-**Memory:** 19.4 MB (beats 19.26%)  
-**Submitted:** 2026-08-17T18:04:00.315Z  
+**Runtime:** 3 ms (beats 1.21%)  
+**Memory:** 19.3 MB (beats 19.71%)  
+**Submitted:** 2026-08-24T17:05:05.137Z  
 
 ```py
 # Definition for singly-linked list.
