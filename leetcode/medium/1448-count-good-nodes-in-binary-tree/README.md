@@ -48,9 +48,9 @@ Explanation: Root is considered as good.
 ## Solution
 
 **Language:** Python  
-**Runtime:** 133 ms (beats 38.77%)  
-**Memory:** 32 MB (beats 38.14%)  
-**Submitted:** 2026-08-28T16:25:32.973Z  
+**Runtime:** 42 ms  
+**Memory:** 19.5 MB  
+**Submitted:** 2026-08-28T16:25:53.214Z  
 
 ```py
 # Definition for a binary tree node.
@@ -61,12 +61,9 @@ Explanation: Root is considered as good.
 #         self.right = right
 class Solution:
     def goodNodes(self, root: TreeNode) -> int:
-
         if root is None:
             return 0
         self.count = 1
-        
-
         def count_good(node, maximum_on_path):
             if not node:
                 return
@@ -75,16 +72,9 @@ class Solution:
                 maximum_on_path = node.val
             count_good(node.left, maximum_on_path)
             count_good(node.right, maximum_on_path)
-
-
         count_good(root.left, root.val)
         count_good(root.right, root.val)
-        return self.count
-
-        
-
-        
-        
+        return self.count    
 ```
 
 ---
