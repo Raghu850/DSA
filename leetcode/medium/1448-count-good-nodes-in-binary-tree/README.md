@@ -48,9 +48,9 @@ Explanation: Root is considered as good.
 ## Solution
 
 **Language:** Python  
-**Runtime:** 122 ms (beats 82.56%)  
-**Memory:** 31.8 MB (beats 94.08%)  
-**Submitted:** 2026-08-28T16:24:28.953Z  
+**Runtime:** 133 ms (beats 38.77%)  
+**Memory:** 32 MB (beats 38.14%)  
+**Submitted:** 2026-08-28T16:25:32.973Z  
 
 ```py
 # Definition for a binary tree node.
