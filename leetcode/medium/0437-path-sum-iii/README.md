@@ -38,50 +38,38 @@ Output: 3
 ## Solution
 
 **Language:** Python  
-**Runtime:** 423 ms (beats 21.14%)  
-**Memory:** 19.6 MB (beats 99.74%)  
-**Submitted:** 2026-08-31T13:46:30.834Z  
+**Runtime:** 0 ms  
+**Memory:** 19.5 MB  
+**Submitted:** 2026-08-31T13:47:06.023Z  
 
 ```py
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
 class Solution:
-
-    def pathSum(self, root, targetSum):
-
-        self.ans = 0
-
-        # Counts all valid paths starting from the current node.
-        def dfs(node, cur):
-
-            if not node:
-                return
-
-            cur += node.val
-
-            if cur == targetSum:
-                self.ans += 1
-
-            dfs(node.left, cur)
-            dfs(node.right, cur)
-
-        if not root:
-            return 0
-
-        stack = [root]
-
-        # Every node becomes a starting point.
-        while stack:
-
-            node = stack.pop()
-
-            dfs(node, 0)
-
-            if node.left:
-                stack.append(node.left)
-
-            if node.right:
-                stack.append(node.right)
-
-        return self.ans
+    def pathSum(self, root: Optional[TreeNode], target: int) -> int:
+        mp = {0: 1}
+        count  = 0
+        def dfs(root, currSum):
+            nonlocal mp
+            nonlocal count
+            if root is None:
+                return 0
+            currSum += root.val
+            find = currSum - target
+            if find in mp:
+                count += mp[find]
+            mp[currSum] = mp.get(currSum, 0)+1
+            dfs(root.left, currSum)
+            dfs(root.right, currSum)
+            mp[currSum] -= 1
+            currSum -= root.val
+        dfs(root, 0)
+        return count
+            
 ```
 
 ---
