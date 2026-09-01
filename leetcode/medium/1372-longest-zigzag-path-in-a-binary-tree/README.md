@@ -55,24 +55,51 @@ Output: 0
 ## Solution
 
 **Language:** Python  
-**Runtime:** 55 ms (beats 41.34%)  
-**Memory:** 38.3 MB (beats 60.92%)  
-**Submitted:** 2026-09-01T17:32:24.428Z  
+**Runtime:** 36 ms (beats 91.48%)  
+**Memory:** 38.4 MB (beats 50.21%)  
+**Submitted:** 2026-09-01T17:32:38.952Z  
 
 ```py
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
 class Solution:
     def longestZigZag(self, root: Optional[TreeNode]) -> int:
-        return max(self.dfs(root.left, True, 0), self.dfs(root.right, False, 0))
-
-    def dfs(self, root, isLeft, length):
         if not root:
-            return length
-        
-        if isLeft:
-            return max(self.dfs(root.right, False, length+1), self.dfs(root.left, True, 0))
+            return 0
+        leftvalue =  self.longestfromcur(root.left,1,1) if root.left else 0
+        rightvalue = self.longestfromcur(root.right,0,1) if root.right else 0
+       
+        return max(leftvalue,rightvalue)
+
+
+
+    def longestfromcur(self,cur,handiness,depth):
+        '''
+        longest length from the cur node, when the current node takes the handiness action. there s already depth number consecutive 
+        '''
+        if (not cur.left) and (not cur.right):
+            return depth
+        if handiness ==0:
+            leftvalue =depth
+            rightvalue =depth
+            if cur.left:
+                leftvalue = self.longestfromcur(cur.left,1,depth+1)
+            if cur.right :
+                rightvalue =  self.longestfromcur(cur.right,0,1)
+            return max(leftvalue,rightvalue)
         else:
-            return max(self.dfs(root.left, True, length+1), self.dfs(root.right, False, 0))
-      
+        
+            leftvalue =depth
+            rightvalue =depth
+            if cur.left:
+                leftvalue = self.longestfromcur(cur.left,1,1)
+            if cur.right :
+                rightvalue = self.longestfromcur(cur.right,0,depth+1)
+            return max(leftvalue,rightvalue)
 ```
 
 ---
