@@ -55,9 +55,9 @@ Output: 0
 ## Solution
 
 **Language:** Python  
-**Runtime:** 36 ms (beats 91.48%)  
-**Memory:** 38.4 MB (beats 50.21%)  
-**Submitted:** 2026-09-01T17:32:38.952Z  
+**Runtime:** 32 ms (beats 95.21%)  
+**Memory:** 38.2 MB (beats 74.03%)  
+**Submitted:** 2026-09-01T17:35:25.887Z  
 
 ```py
 # Definition for a binary tree node.
