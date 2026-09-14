@@ -54,39 +54,40 @@ The total hiring cost is 4.
 ## Solution
 
 **Language:** Python  
-**Runtime:** 130 ms (beats 60.55%)  
-**Memory:** 29.2 MB (beats 62.17%)  
-**Submitted:** 2026-09-14T17:31:59.531Z  
+**Runtime:** 89 ms (beats 94.92%)  
+**Memory:** 28.9 MB (beats 90.46%)  
+**Submitted:** 2026-09-14T17:32:14.081Z  
 
 ```py
 class Solution:
-    def totalCost(self, costs, k, candidates):
-        i = 0
-        j = len(costs) - 1
-        pq1 = []
-        pq2 = []
+    def totalCost(self, costs: List[int], k: int, candidates: int) -> int:
+        costLen = len(costs)
+        left = candidates
+        right = costLen - 1 - candidates
 
-        ans = 0
-        while k > 0:
-            while len(pq1) < candidates and i <= j:
-                heapq.heappush(pq1, costs[i])
-                i += 1
-            while len(pq2) < candidates and i <= j:
-                heapq.heappush(pq2, costs[j])
-                j -= 1
+        minHeapLeft = costs[:candidates]
+        minHeapRight = costs[max(candidates, costLen - candidates):]
 
-            t1 = pq1[0] if pq1 else float('inf')
-            t2 = pq2[0] if pq2 else float('inf')
+        heapq.heapify(minHeapLeft)
+        heapq.heapify(minHeapRight)
 
-            if t1 <= t2:
-                ans += t1
-                heapq.heappop(pq1)
+        total = 0
+
+        for _ in range(k):
+            if not minHeapRight or (minHeapLeft and minHeapLeft[0] <= minHeapRight[0]):
+                if left <= right:
+                    total += heapq.heapreplace(minHeapLeft, costs[left])
+                    left += 1
+                else:
+                    total += heapq.heappop(minHeapLeft)
             else:
-                ans += t2
-                heapq.heappop(pq2)
+                if left <= right:
+                    total += heapq.heapreplace(minHeapRight, costs[right])
+                    right -= 1
+                else:
+                    total += heapq.heappop(minHeapRight)
 
-            k -= 1
-        return ans
+        return total
 ```
 
 ---
