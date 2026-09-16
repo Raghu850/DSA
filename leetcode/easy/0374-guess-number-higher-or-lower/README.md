@@ -54,9 +54,9 @@ Output: 1
 ## Solution
 
 **Language:** Python  
-**Runtime:** 54 ms  
-**Memory:** 19.4 MB  
-**Submitted:** 2026-09-15T14:23:58.564Z  
+**Runtime:** 43 ms (beats 66.63%)  
+**Memory:** 19.2 MB (beats 29.98%)  
+**Submitted:** 2026-09-15T14:24:07.387Z  
 
 ```py
 # The guess API is already defined for you.
