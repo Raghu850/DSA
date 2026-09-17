@@ -42,8 +42,8 @@ Explanation: Your function can return either index number 1 where the peak eleme
 
 **Language:** Python  
 **Runtime:** 0 ms (beats 100.00%)  
-**Memory:** 19.3 MB (beats 39.22%)  
-**Submitted:** 2026-08-07T19:52:24.174Z  
+**Memory:** 19.4 MB (beats 41.36%)  
+**Submitted:** 2026-09-17T16:12:31.365Z  
 
 ```py
 class Solution:
