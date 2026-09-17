@@ -54,9 +54,9 @@ Output: 1
 ## Solution
 
 **Language:** Python  
-**Runtime:** 43 ms (beats 66.63%)  
-**Memory:** 19.2 MB (beats 29.98%)  
-**Submitted:** 2026-09-15T14:24:07.387Z  
+**Runtime:** 44 ms (beats 57.42%)  
+**Memory:** 19.2 MB (beats 70.34%)  
+**Submitted:** 2026-09-15T14:24:53.519Z  
 
 ```py
 # The guess API is already defined for you.
@@ -65,25 +65,20 @@ Output: 1
 #          1 if num is lower than the picked number
 #          otherwise return 0
 # def guess(num: int) -> int:
-
 class Solution:
-   
     def guessNumber(self, n: int) -> int:
+        left = 1
+        right = n
 
-        low = 1
-        high = n
+        while left <= right:
+            mid = (left + right) // 2
 
-        while low <= high:
-            mid = low + (high - low) // 2
-
-            res = guess(mid)
-
-            if res == 0:
+            if guess(mid) == 0:
                 return mid
-            elif res == 1:
-                low = mid + 1
+            elif guess(mid) == -1:
+                right = mid - 1
             else:
-                high = mid - 1
+                left = mid + 1
 ```
 
 ---
