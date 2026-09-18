@@ -49,26 +49,38 @@ Output: 23
 ## Solution
 
 **Language:** Python  
-**Runtime:** 159 ms (beats 86.25%)  
-**Memory:** 20.6 MB (beats 42.33%)  
-**Submitted:** 2026-08-07T20:27:48.892Z  
+**Runtime:** 150 ms (beats 96.18%)  
+**Memory:** 20.7 MB (beats 13.16%)  
+**Submitted:** 2026-09-18T09:20:56.847Z  
 
 ```py
 class Solution:
+    def timeTaken(self, piles: List[int], speed: int) -> int:
+        totalTime = 0
+        for n in piles:
+            totalTime += ceil(n/speed)
+        
+        return totalTime
+
     def minEatingSpeed(self, piles: List[int], h: int) -> int:
-        l=1
-        r=max(piles)
-        while l<=r:
-            mid=(l+r)//2
-            ch=0
-            for b in piles:
-                ch+=ceil(b/mid)
-            if ch<=h:
-                res=mid
-                r=mid-1
+        # The range shuld be between min(piles) and max(piles)
+        low = 1
+        high = max(piles)
+        ans = 1e9
+
+        while(low <= high):
+            mid = low + (high-low)//2
+
+            # If within limits look for a lower number
+            if self.timeTaken(piles, mid) <= h:
+                ans = mid
+                high = mid - 1
+            
+            # Look for a higher number
             else:
-                l=mid+1
-        return res
+                low = mid + 1
+        
+        return ans
 ```
 
 ---
