@@ -47,9 +47,9 @@ Explanation: The optimal solution is to remove the last three elements and the f
 ## Solution
 
 **Language:** Python  
-**Runtime:** 0 ms  
-**Memory:** 19.3 MB  
-**Submitted:** 2026-09-23T14:59:17.451Z  
+**Runtime:** 47 ms (beats 99.59%)  
+**Memory:** 30.8 MB (beats 81.29%)  
+**Submitted:** 2026-09-23T14:59:24.885Z  
 
 ```py
 class Solution:
