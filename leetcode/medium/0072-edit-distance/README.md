@@ -50,9 +50,9 @@ exection -> execution (insert 'u')
 ## Solution
 
 **Language:** Python  
-**Runtime:** 31 ms (beats 89.76%)  
-**Memory:** 25.4 MB (beats 15.76%)  
-**Submitted:** 2026-09-28T14:45:56.384Z  
+**Runtime:** 29 ms (beats 91.36%)  
+**Memory:** 25.8 MB (beats 10.94%)  
+**Submitted:** 2026-09-28T15:10:52.845Z  
 
 ```py
 class Solution:
