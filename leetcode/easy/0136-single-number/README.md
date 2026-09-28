@@ -39,17 +39,18 @@ You must implement a solution with a linear runtime complexity and use only co
 ## Solution
 
 **Language:** Python  
-**Runtime:** 3 ms (beats 60.58%)  
-**Memory:** 21.2 MB (beats 43.17%)  
-**Submitted:** 2026-07-30T07:25:12.559Z  
+**Runtime:** 0 ms (beats 100.00%)  
+**Memory:** 21.3 MB (beats 25.10%)  
+**Submitted:** 2026-09-28T16:03:38.118Z  
 
 ```py
 class Solution:
     def singleNumber(self, nums: List[int]) -> int:
-        x=0
-        for i in nums:
-            x=x^i
-        return x
+        result = 0
+        for num in nums:
+            result ^= num  # XOR operation
+        return result   
+             
 ```
 
 ---
