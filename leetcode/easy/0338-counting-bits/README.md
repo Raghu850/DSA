@@ -52,9 +52,9 @@ Explanation:
 ## Solution
 
 **Language:** Python  
-**Runtime:** 0 ms (beats 100.00%)  
-**Memory:** 21 MB (beats 5.84%)  
-**Submitted:** 2026-09-28T14:21:06.488Z  
+**Runtime:** 0 ms  
+**Memory:** 19.7 MB  
+**Submitted:** 2026-09-28T14:21:00.988Z  
 
 ```py
 class Solution:
