@@ -52,17 +52,17 @@ Explanation:
 ## Solution
 
 **Language:** Python  
-**Runtime:** 3 ms (beats 95.49%)  
-**Memory:** 20.1 MB (beats 69.17%)  
-**Submitted:** 2026-09-28T14:20:35.186Z  
+**Runtime:** 0 ms (beats 100.00%)  
+**Memory:** 21 MB (beats 5.84%)  
+**Submitted:** 2026-09-28T14:21:06.488Z  
 
 ```py
 class Solution:
-    def countBits(self, n: int) -> List[int]:
-        sum=[0]*(n+1)
-        for i in range(1,n+1):
-            sum[i]=sum[i >> 1] + (i & 1)
-        return sum 
+    ans=[0]
+    for i in range(1,10**5+1):
+        ans.append(ans[i>>1]+(i&1))
+    def countBits(self, n: int) -> list[int]:
+        return self.ans[:n+1]
 ```
 
 ---
