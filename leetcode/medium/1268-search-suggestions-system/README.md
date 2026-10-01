@@ -47,9 +47,9 @@ Explanation: The only word "havana" will be always suggested while typing the se
 ## Solution
 
 **Language:** Python  
-**Runtime:** 0 ms  
-**Memory:** 19.2 MB  
-**Submitted:** 2026-10-01T13:37:13.579Z  
+**Runtime:** 3 ms (beats 95.72%)  
+**Memory:** 22.3 MB (beats 65.46%)  
+**Submitted:** 2026-10-01T13:37:19.342Z  
 
 ```py
 class Solution:
