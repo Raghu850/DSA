@@ -48,25 +48,25 @@ Explanation: You don't need to remove any of the intervals since they're already
 ## Solution
 
 **Language:** Python  
-**Runtime:** 71 ms (beats 73.97%)  
-**Memory:** 49 MB (beats 56.62%)  
-**Submitted:** 2026-10-02T08:51:03.773Z  
+**Runtime:** 0 ms  
+**Memory:** 19.2 MB  
+**Submitted:** 2026-10-02T08:51:24.623Z  
 
 ```py
 class Solution:
-    def eraseOverlapIntervals(self, intervals: List[List[int]]) -> int:
-        res = 0
-
-        intervals.sort(key=lambda x: x[1])
-        prev_end = intervals[0][1]
-
-        for i in range(1, len(intervals)):
-            if prev_end > intervals[i][0]:
-                res += 1
-            else:
-                prev_end = intervals[i][1]
+    def eraseOverlapIntervals(self, intervals: list[list[int]]) -> int:
         
-        return res
+        intervals.sort(key = lambda x : x[1])
+
+        keep = 0
+
+        curEnd = float('-INF')
+        for s, e in intervals:
+            if s >= curEnd:
+                keep+=1
+                curEnd = e
+        
+        return len(intervals) - keep
 ```
 
 ---
