@@ -48,9 +48,9 @@ Explanation: You don't need to remove any of the intervals since they're already
 ## Solution
 
 **Language:** Python  
-**Runtime:** 0 ms  
-**Memory:** 19.2 MB  
-**Submitted:** 2026-10-02T08:51:24.623Z  
+**Runtime:** 63 ms (beats 90.42%)  
+**Memory:** 49.1 MB (beats 56.62%)  
+**Submitted:** 2026-10-02T08:51:29.377Z  
 
 ```py
 class Solution:
