@@ -54,9 +54,9 @@ Explanation: The balloons can be burst by 2 arrows:
 ## Solution
 
 **Language:** Python  
-**Runtime:** 0 ms  
-**Memory:** 19.2 MB  
-**Submitted:** 2026-10-03T17:27:00.458Z  
+**Runtime:** 69 ms (beats 71.63%)  
+**Memory:** 53.4 MB (beats 66.41%)  
+**Submitted:** 2026-10-03T17:27:05.317Z  
 
 ```py
 class Solution:
