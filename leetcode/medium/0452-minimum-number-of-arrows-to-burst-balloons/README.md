@@ -54,25 +54,30 @@ Explanation: The balloons can be burst by 2 arrows:
 ## Solution
 
 **Language:** Python  
-**Runtime:** 72 ms (beats 65.51%)  
-**Memory:** 53.5 MB (beats 66.41%)  
-**Submitted:** 2026-10-03T17:26:43.950Z  
+**Runtime:** 0 ms  
+**Memory:** 19.2 MB  
+**Submitted:** 2026-10-03T17:27:00.458Z  
 
 ```py
 class Solution:
-    def findMinArrowShots(self, points: List[List[int]]) -> int:
-        points.sort(key=lambda x: x[0])
-        arrows = 1
-        end = points[0][1]
+    def findMinArrowShots(self, points: list[list[int]]) -> int:
+        if not points:
+            return 0
+            
         
-        for balloon in points[1:]:
-            if balloon[0] > end: 
-                arrows += 1  
-                end = balloon[1] 
-            else:
-                end = min(end, balloon[1])
+        points.sort(key=lambda x: x[1])
         
+        arrows = 0
+        arrow_position = None
+        
+        for start, end in points:
+           
+            if arrow_position is None or start > arrow_position:
+                arrows += 1
+                arrow_position = end
+                
         return arrows
+        
 ```
 
 ---
