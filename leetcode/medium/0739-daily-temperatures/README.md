@@ -42,23 +42,24 @@ Output: [1,1,0]
 ## Solution
 
 **Language:** Python  
-**Runtime:** 84 ms (beats 85.44%)  
-**Memory:** 27.9 MB (beats 97.40%)  
-**Submitted:** 2026-10-04T18:15:11.640Z  
+**Runtime:** 87 ms (beats 79.67%)  
+**Memory:** 28.1 MB (beats 89.38%)  
+**Submitted:** 2026-10-04T18:15:28.237Z  
 
 ```py
 class Solution:
-    def dailyTemperatures(self, temps):
-        results = [0] * len(temps)
-        stack = []
-        # UPVOTE !
-        for i, temp in enumerate(temps):
-            while stack and temps[stack[-1]] < temp:
-                index = stack.pop()
-                results[index] = i - index
+    def dailyTemperatures(self, temperatures):
+        answer = [0] * len(temperatures)
+        stack = []  # stores indices
+
+        for i in range(len(temperatures)):
+            while stack and temperatures[i] > temperatures[stack[-1]]:
+                prev = stack.pop()
+                answer[prev] = i - prev
+
             stack.append(i)
 
-        return results
+        return answer
 ```
 
 ---
