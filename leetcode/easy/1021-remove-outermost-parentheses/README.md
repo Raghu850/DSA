@@ -60,20 +60,26 @@ After removing outer parentheses of each part, this is "" + "" = "".
 ## Solution
 
 **Language:** Python  
-**Runtime:** 4 ms (beats 22.56%)  
-**Memory:** 19.4 MB (beats 8.63%)  
-**Submitted:** 2026-10-08T16:00:36.155Z  
+**Runtime:** 0 ms  
+**Memory:** 19.4 MB  
+**Submitted:** 2026-10-08T16:00:52.961Z  
 
 ```py
 class Solution:
-    def removeOuterParentheses(self, S: str) -> str:
-        res, opened = [], 0
-        for c in S:
-            if c == '(' and opened > 0: res.append(c)
-            if c == ')' and opened > 1: res.append(c)
-            opened += 1 if c == '(' else -1
-        
+    def removeOuterParentheses(self, s: str) -> str:
+        res=[]
+        count=0
+        for ch in s:
+            if ch=='(':
+                if count>0:
+                    res.append(ch)
+                count+=1
+            else:
+                count-=1
+                if count>0:
+                    res.append(ch)
         return "".join(res)
+        
 ```
 
 ---
