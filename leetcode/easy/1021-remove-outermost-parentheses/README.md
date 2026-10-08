@@ -60,9 +60,9 @@ After removing outer parentheses of each part, this is "" + "" = "".
 ## Solution
 
 **Language:** Python  
-**Runtime:** 0 ms  
-**Memory:** 19.4 MB  
-**Submitted:** 2026-10-08T16:00:52.961Z  
+**Runtime:** 0 ms (beats 100.00%)  
+**Memory:** 19.3 MB (beats 32.26%)  
+**Submitted:** 2026-10-08T16:00:57.124Z  
 
 ```py
 class Solution:
