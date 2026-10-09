@@ -56,34 +56,40 @@ Explanation: Add '(' to match the first '))', Add '))' to match the last '('.
 ## Solution
 
 **Language:** Python  
-**Runtime:** 91 ms (beats 24.91%)  
-**Memory:** 19.9 MB (beats 37.54%)  
-**Submitted:** 2026-10-09T16:10:28.035Z  
+**Runtime:** 0 ms  
+**Memory:** 19.5 MB  
+**Submitted:** 2026-10-09T16:11:05.925Z  
 
 ```py
 class Solution:
     def minInsertions(self, s: str) -> int:
-        open = ans = 0
-        i = 0
+        blc = ans = 0
+        need = False
 
-        while i < len(s):
-            if s[i] == '(':
-                open += 1
+        for ch in s:
+            if ch == '(':
+                if need:
+                    ans += 1
+                    need = False
+
+                blc += 1
+            
             else:
-                # Step 1: make a "))"
-                if i + 1 < len(s) and s[i + 1] == ')':
-                    i += 1
+                if need:
+                    need = False
                 else:
-                    ans += 1
+                    if blc == 0:
+                        blc += 1
+                        ans += 1
+                
+                    blc -= 1
+                    need = True
+        
+        if need:
+            ans += 1
 
-                # Step 2: find its '('
-                if open > 0:
-                    open -= 1
-                else:
-                    ans += 1
-            i += 1
-
-        return ans + open * 2
+        ans += blc * 2
+        return ans
 ```
 
 ---
