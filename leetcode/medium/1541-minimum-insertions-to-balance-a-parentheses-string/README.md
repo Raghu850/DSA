@@ -56,9 +56,9 @@ Explanation: Add '(' to match the first '))', Add '))' to match the last '('.
 ## Solution
 
 **Language:** Python  
-**Runtime:** 0 ms  
-**Memory:** 19.5 MB  
-**Submitted:** 2026-10-09T16:11:05.925Z  
+**Runtime:** 48 ms (beats 95.79%)  
+**Memory:** 19.8 MB (beats 59.30%)  
+**Submitted:** 2026-10-09T16:11:10.909Z  
 
 ```py
 class Solution:
