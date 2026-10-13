@@ -57,9 +57,9 @@ Apply Operation 2: "baaccc" -> "abbccc"
 ## Solution
 
 **Language:** Python  
-**Runtime:** 0 ms  
-**Memory:** 19.3 MB  
-**Submitted:** 2026-10-13T13:33:01.967Z  
+**Runtime:** 79 ms (beats 82.11%)  
+**Memory:** 20.4 MB (beats 53.29%)  
+**Submitted:** 2026-10-13T13:33:07.278Z  
 
 ```py
 # class Solution:
