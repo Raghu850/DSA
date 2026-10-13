@@ -57,25 +57,22 @@ Apply Operation 2: "baaccc" -> "abbccc"
 ## Solution
 
 **Language:** Python  
-**Runtime:** 139 ms (beats 46.96%)  
-**Memory:** 20.3 MB (beats 81.26%)  
-**Submitted:** 2026-10-13T13:32:37.087Z  
+**Runtime:** 0 ms  
+**Memory:** 19.3 MB  
+**Submitted:** 2026-10-13T13:33:01.967Z  
 
 ```py
+# class Solution:
+#     def closeStrings(self, word1: str, word2: str) -> bool:
+#         from collections import Counter
+#         dict1, dict2 = dict(sorted(Counter(word1).items())), dict(sorted(Counter(word2).items()))
+#         # print(sorted(dict1.values()), sorted(dict2.values()))
+#         return sorted(dict1.values()) == sorted(dict2.values())
 class Solution:
     def closeStrings(self, word1: str, word2: str) -> bool:
-        c1 = Counter(word1)
-        c2 = Counter(word2)
-        v1 = c1.values()
-        v2 = c2.values()
-        k1 = c1.keys()
-        k2 = c2.keys()
-        if sorted(k1) != sorted(k2):
-            return False
-        for val1, val2 in zip(sorted(v1), sorted(v2)):
-            if val1 != val2:
-                return False
-        return True
+        from collections import Counter
+        if set(word1) != set(word2): return False
+        return sorted(Counter(word1).values()) == sorted(Counter(word2).values())
 ```
 
 ---
