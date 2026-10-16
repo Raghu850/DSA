@@ -10,7 +10,7 @@ You want to make `m` bouquets. To make a bouquet, you need to use `k`  **adjacen
 
 The garden consists of `n` flowers, the `ith` flower will bloom in the `bloomDay[i]` and then can be used in  **exactly one**  bouquet.
 
-Return  *the minimum number of days you need to wait to be able to make* `m` *bouquets from the garden*. If it is impossible to make m bouquets return `-1`.
+Return the  **minimum**  number of days you need to wait to be able to make m bouquets from the garden. If it is impossible to make m bouquets return -1.
 
  
 
@@ -63,9 +63,9 @@ It is obvious that we can make two bouquets in different ways.
 ## Solution
 
 **Language:** Python  
-**Runtime:** 251 ms (beats 98.86%)  
-**Memory:** 32.4 MB (beats 12.01%)  
-**Submitted:** 2026-08-07T21:06:35.537Z  
+**Runtime:** 261 ms (beats 97.23%)  
+**Memory:** 32.4 MB (beats 25.69%)  
+**Submitted:** 2026-10-16T15:01:14.160Z  
 
 ```py
 class Solution:
