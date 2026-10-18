@@ -38,9 +38,9 @@ Output: false
 ## Solution
 
 **Language:** Python  
-**Runtime:** 11 ms (beats 98.06%)  
-**Memory:** 53.6 MB (beats 14.94%)  
-**Submitted:** 2026-08-18T16:49:20.153Z  
+**Runtime:** 20 ms (beats 86.25%)  
+**Memory:** 53.6 MB (beats 15.49%)  
+**Submitted:** 2026-10-18T16:29:02.127Z  
 
 ```py
 # Definition for singly-linked list.
