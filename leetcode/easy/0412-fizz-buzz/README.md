@@ -46,9 +46,9 @@ Output: ["1","2","Fizz","4","Buzz","Fizz","7","8","Fizz","Buzz","11","Fizz","13"
 ## Solution
 
 **Language:** Python  
-**Runtime:** 1 ms (beats 36.70%)  
-**Memory:** 19.5 MB (beats 51.93%)  
-**Submitted:** 2026-10-31T15:19:56.106Z  
+**Runtime:** 0 ms  
+**Memory:** 19.1 MB  
+**Submitted:** 2026-10-31T15:20:29.196Z  
 
 ```py
 class Solution:
