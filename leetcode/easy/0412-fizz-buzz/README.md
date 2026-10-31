@@ -46,25 +46,26 @@ Output: ["1","2","Fizz","4","Buzz","Fizz","7","8","Fizz","Buzz","11","Fizz","13"
 ## Solution
 
 **Language:** Python  
-**Runtime:** 0 ms  
-**Memory:** 19.1 MB  
-**Submitted:** 2026-10-31T15:20:29.196Z  
+**Runtime:** 1 ms (beats 36.70%)  
+**Memory:** 19.5 MB (beats 51.93%)  
+**Submitted:** 2026-10-31T15:22:30.014Z  
 
 ```py
 class Solution:
-    def fizzBuzz(self, n: int) -> List[str]:
-        a=[]
-        for i in range(1,n+1):
-            if i%3==0:
-                if i%5==0:
-                    a.append("FizzBuzz")
-                else:
-                    a.append("Fizz")
-            elif i%5==0:
-                a.append("Buzz")
+    def fizzBuzz(self, n: int) -> list[str]:
+        answer = []
+
+        for i in range(1, n + 1):
+            if i % 3 == 0 and i % 5 == 0:
+                answer.append("FizzBuzz")
+            elif i % 3 == 0:
+                answer.append("Fizz")
+            elif i % 5 == 0:
+                answer.append("Buzz")
             else:
-                a.append(str(i))
-        return a
+                answer.append(str(i))
+
+        return answer
 ```
 
 ---
