@@ -57,8 +57,8 @@ Output: [true,false,true]
 
 **Language:** Python  
 **Runtime:** 0 ms (beats 100.00%)  
-**Memory:** 19.2 MB (beats 62.46%)  
-**Submitted:** 2026-08-17T17:53:01.311Z  
+**Memory:** 19.2 MB (beats 57.17%)  
+**Submitted:** 2026-11-01T16:35:15.580Z  
 
 ```py
 class Solution:
