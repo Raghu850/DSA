@@ -55,8 +55,8 @@ Since the largest window of s only has one 'a', return empty string.
 
 **Language:** Python  
 **Runtime:** 60 ms (beats 77.58%)  
-**Memory:** 19.7 MB (beats 66.09%)  
-**Submitted:** 2026-11-02T16:30:15.239Z  
+**Memory:** 19.5 MB (beats 87.83%)  
+**Submitted:** 2026-11-02T16:29:57.589Z  
 
 ```py
 class Solution:
