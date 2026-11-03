@@ -54,9 +54,9 @@ Choosing index 2 is optimal: nums1[2]  *nums2[2] = 3*  10 = 30 is the maximum po
 ## Solution
 
 **Language:** Python  
-**Runtime:** 163 ms (beats 74.72%)  
-**Memory:** 41.4 MB (beats 98.31%)  
-**Submitted:** 2026-09-13T14:06:01.656Z  
+**Runtime:** 148 ms (beats 92.34%)  
+**Memory:** 41.4 MB (beats 98.24%)  
+**Submitted:** 2026-11-03T15:45:48.706Z  
 
 ```py
 class Solution:
