@@ -65,9 +65,9 @@ You can move at most k = 2 steps and cannot reach any position with fruits.
 ## Solution
 
 **Language:** Python  
-**Runtime:** 105 ms (beats 45.18%)  
-**Memory:** 53.8 MB (beats 95.18%)  
-**Submitted:** 2026-11-04T15:16:22.121Z  
+**Runtime:** 108 ms (beats 43.98%)  
+**Memory:** 53.9 MB (beats 95.18%)  
+**Submitted:** 2026-11-04T15:18:57.955Z  
 
 ```py
 class Solution:
