@@ -59,9 +59,9 @@ Explanation: The asteroid -6 makes the asteroid 3 and 5 explode, and then contin
 ## Solution
 
 **Language:** Python  
-**Runtime:** 3 ms (beats 94.02%)  
-**Memory:** 20.4 MB (beats 32.37%)  
-**Submitted:** 2026-08-20T09:34:51.454Z  
+**Runtime:** 5 ms (beats 73.29%)  
+**Memory:** 20.4 MB (beats 27.54%)  
+**Submitted:** 2026-11-05T18:03:10.686Z  
 
 ```py
 class Solution:
