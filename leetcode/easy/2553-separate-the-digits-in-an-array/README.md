@@ -46,21 +46,14 @@ answer = [7,1,3,9].
 ## Solution
 
 **Language:** Python  
-**Runtime:** 2 ms (beats 82.32%)  
-**Memory:** 19.4 MB (beats 79.60%)  
-**Submitted:** 2026-11-06T10:26:51.579Z  
+**Runtime:** 3 ms (beats 73.50%)  
+**Memory:** 19.5 MB (beats 45.34%)  
+**Submitted:** 2026-11-06T10:28:05.285Z  
 
 ```py
 class Solution:
-    def separateDigits(self, nums: List[int]) -> List[int]:
-        res = []
-        for num in nums:
-            if num > 9:
-                for d in str(num):
-                    res.append(int(d))
-            else:
-                res.append(num)
-        return res
+    def separateDigits(self, a: List[int]) -> List[int]:
+        return [int(c) for v in a for c in str(v)]
 ```
 
 ---
