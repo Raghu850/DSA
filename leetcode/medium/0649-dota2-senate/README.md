@@ -55,9 +55,9 @@ And in round 2, the third senator can just announce the victory since he is the 
 ## Solution
 
 **Language:** Python  
-**Runtime:** 11 ms (beats 79.33%)  
-**Memory:** 19.5 MB (beats 78.84%)  
-**Submitted:** 2026-08-20T10:10:08.462Z  
+**Runtime:** 10 ms (beats 86.55%)  
+**Memory:** 19.5 MB (beats 55.04%)  
+**Submitted:** 2026-11-07T16:03:47.497Z  
 
 ```py
 from collections import deque
