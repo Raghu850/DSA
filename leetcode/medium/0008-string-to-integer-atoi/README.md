@@ -112,9 +112,9 @@ Reading stops at the first non-digit character 'w'.
 ## Solution
 
 **Language:** Python  
-**Runtime:** 0 ms  
-**Memory:** 19.5 MB  
-**Submitted:** 2026-11-08T16:34:00.786Z  
+**Runtime:** 2 ms (beats 47.22%)  
+**Memory:** 19.1 MB (beats 88.97%)  
+**Submitted:** 2026-11-08T16:34:05.400Z  
 
 ```py
 class Solution:
