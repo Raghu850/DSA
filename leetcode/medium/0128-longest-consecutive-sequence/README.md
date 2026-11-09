@@ -45,23 +45,22 @@ Output: 3
 ## Solution
 
 **Language:** Python  
-**Runtime:** 44 ms (beats 78.53%)  
-**Memory:** 36.6 MB (beats 66.24%)  
-**Submitted:** 2026-08-01T08:15:14.122Z  
+**Runtime:** 50 ms (beats 61.80%)  
+**Memory:** 36.5 MB (beats 62.67%)  
+**Submitted:** 2026-11-09T15:36:11.176Z  
 
 ```py
 class Solution:
     def longestConsecutive(self, nums: List[int]) -> int:
-        h=set(nums)
-        longest=0
-        cnt=0
-        for i in h:
-            if i-1 not in h:
-                cnt=1
-                while i+cnt in h:
-                    cnt+=1
-            longest=max(longest,cnt)
-        return longest
+       h=set(nums)
+       m=0
+       for i in h:
+        if (i-1) not in h:
+            count=1
+            while i+count in h:
+                count+=1
+            m=max(m,count)
+       return m
 ```
 
 ---
