@@ -10,6 +10,8 @@ Given an integer array `nums` representing the amount of money of each house, re
 
  
 
+Original
+Python3
  **Example 1:** 
 
 ```
@@ -41,8 +43,8 @@ Total amount you can rob = 2 + 9 + 1 = 12.
 
 **Language:** Python  
 **Runtime:** 0 ms (beats 100.00%)  
-**Memory:** 19.3 MB (beats 63.25%)  
-**Submitted:** 2026-09-23T14:52:08.359Z  
+**Memory:** 19.3 MB (beats 48.21%)  
+**Submitted:** 2026-11-15T12:51:36.787Z  
 
 ```py
 class Solution:
