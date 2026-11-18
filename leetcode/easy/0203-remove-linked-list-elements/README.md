@@ -43,27 +43,27 @@ Output: []
 ## Solution
 
 **Language:** Python  
-**Runtime:** 3 ms (beats 43.46%)  
-**Memory:** 22.4 MB (beats 70.55%)  
-**Submitted:** 2026-11-17T13:03:39.572Z  
+**Runtime:** 5 ms (beats 9.21%)  
+**Memory:** 22.3 MB (beats 70.55%)  
+**Submitted:** 2026-11-17T13:02:43.819Z  
 
 ```py
-# Definition for singly-linked list.
-# class ListNode:
-#     def __init__(self, val=0, next=None):
-#         self.val = val
-#         self.next = next
+
 class Solution:
     def removeElements(self, head: Optional[ListNode], val: int) -> Optional[ListNode]:
-        ans = ListNode(0, head)
-        dummy = ans
 
-        while dummy:
-            while dummy.next and dummy.next.val == val:
-                dummy.next = dummy.next.next
-            dummy = dummy.next
-        
-        return ans.next
+        dummy = ListNode(0)
+        dummy.next = head
+
+        curr = dummy
+
+        while curr.next:
+            if curr.next.val == val:
+                curr.next = curr.next.next
+            else:
+                curr = curr.next
+
+        return dummy.next
 ```
 
 ---
