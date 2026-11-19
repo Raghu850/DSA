@@ -55,9 +55,9 @@ Python3
 ## Solution
 
 **Language:** Python  
-**Runtime:** 0 ms  
-**Memory:** 19.2 MB  
-**Submitted:** 2026-11-18T15:09:28.681Z  
+**Runtime:** 0 ms (beats 100.00%)  
+**Memory:** 19.2 MB (beats 50.55%)  
+**Submitted:** 2026-11-18T15:09:33.612Z  
 
 ```py
 class Solution:
