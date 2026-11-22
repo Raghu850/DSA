@@ -48,9 +48,9 @@ Output: []
 ## Solution
 
 **Language:** Python  
-**Runtime:** 3 ms (beats 30.31%)  
-**Memory:** 20 MB (beats 77.17%)  
-**Submitted:** 2026-11-22T14:50:03.337Z  
+**Runtime:** 0 ms  
+**Memory:** 19 MB  
+**Submitted:** 2026-11-22T14:50:19.794Z  
 
 ```py
 # Definition for a binary tree node.
@@ -60,21 +60,22 @@ Output: []
 #         self.left = left
 #         self.right = right
 class Solution:
-    def pathSum(self, root: Optional[TreeNode], targetSum: int) -> List[List[int]]:
-        res=[]
-        def find(node,path,cur):
-            if not node:
-                return 
-            cur+=node.val
-            path.append(node.val)
-            if not node.left and not node.right and cur==targetSum:
-                res.append(path[:])
-
-            find(node.left,path,cur)
-            find(node.right,path,cur)
+    def pathSum(self, root: TreeNode | None, targetSum: int) -> list[list[int]]:
+        ans = []
+        def f(root, sum, path):
+            if not root:
+                return
+            sum += root.val
+            path.append(root.val)
+            if not root.left and not root.right and sum == targetSum:
+                ans.append(path.copy())
+                path.pop()
+                return
+            f(root.left, sum, path)
+            f(root.right, sum, path)
             path.pop()
-        find(root, [],0)
-        return res
+        f(root, 0, [])
+        return ans
 ```
 
 ---
