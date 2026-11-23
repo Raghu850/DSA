@@ -44,34 +44,38 @@ Explanation: 7/-3 = -2.33333.. which is truncated to -2.
 ## Solution
 
 **Language:** Python  
-**Runtime:** 1 ms (beats 49.38%)  
-**Memory:** 19.1 MB (beats 77.13%)  
-**Submitted:** 2026-11-23T06:38:34.958Z  
+**Runtime:** 0 ms  
+**Memory:** 19.3 MB  
+**Submitted:** 2026-11-23T06:38:50.790Z  
 
 ```py
 class Solution:
     def divide(self, dividend: int, divisor: int) -> int:
-        MAX_INT = (2**31)-1
-        MIN_INT = -2**31
-        num = abs(dividend)
-        den = abs(divisor)
+        INT_MAX = 2**31 - 1  # 2147483647
+        INT_MIN = -2**31     # -2147483648
+
+        # The only case where 32-bit integer division overflows
+        if dividend == INT_MIN and divisor == -1:
+            return INT_MAX
+
+        # Determine if the final quotient should be negative
+        negative = (dividend < 0) != (divisor < 0)
+
+        a, b = abs(dividend), abs(divisor)
         quotient = 0
-        while num >= den:
-            temp_den = den
+
+        while a >= b:
+            temp = b
             multiple = 1
-            while num >= (temp_den << 1):
-                temp_den = temp_den << 1
-                multiple = multiple << 1
-            num -= temp_den
+            # Double temp and multiple until the next doubling exceeds a
+            while a >= (temp << 1):
+                temp <<= 1
+                multiple <<= 1
+
+            a -= temp
             quotient += multiple
-        is_negative = (dividend < 0) != (divisor < 0)
-        ans = -quotient if is_negative else quotient
-        if ans > MAX_INT:
-            return MAX_INT
-        elif ans < MIN_INT:
-            return MIN_INT
-        else:
-            return ans
+
+        return -quotient if negative else quotient
 ```
 
 ---
